@@ -52,24 +52,53 @@ function updateMusicButton() {
   refreshIcons();
 }
 
-music.addEventListener("play", updateMusicButton);
+function stopMusicAutostart() {
+  document.removeEventListener("click", startMusicOnInteraction);
+  document.removeEventListener("keydown", startMusicOnInteraction);
+}
+
+async function startMusic(automatic = false) {
+  try {
+    await music.play();
+    stopMusicAutostart();
+    musicStatus.textContent = "Music is playing.";
+  } catch (error) {
+    musicStatus.textContent = automatic && error.name === "NotAllowedError"
+      ? "Music will start when you interact with the invitation."
+      : "Music could not be played. Please try again.";
+    updateMusicButton();
+  }
+}
+
+function startMusicOnInteraction(event) {
+  if (musicButton.contains(event.target)) return;
+  if (event.type === "keydown" && event.key !== "Enter" && event.key !== " ") return;
+  stopMusicAutostart();
+  startMusic();
+}
+
+music.addEventListener("play", () => {
+  stopMusicAutostart();
+  updateMusicButton();
+});
 music.addEventListener("pause", updateMusicButton);
 musicButton.addEventListener("click", async () => {
+  stopMusicAutostart();
   if (!music.paused) {
     music.pause();
     return;
   }
   musicButton.disabled = true;
   try {
-    await music.play();
-    musicStatus.textContent = "Music is playing.";
-  } catch {
-    musicStatus.textContent = "Music could not be played. Please try again.";
-    updateMusicButton();
+    await startMusic();
   } finally {
     musicButton.disabled = false;
   }
 });
+
+document.addEventListener("click", startMusicOnInteraction);
+document.addEventListener("keydown", startMusicOnInteraction);
+startMusic(true);
 
 const celebrations = [
   { name: "Haldi", start: "20261226T103000Z" },
