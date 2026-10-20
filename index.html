@@ -3,75 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pratik & Partner</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#244c3d" />
+  <meta name="description" content="Celebrate Pratik and Sakshi's wedding on 26 & 27 December 2026 at Adarsh Lawns, Barshi." />
+  <title>Pratik & Sakshi | 26 & 27 December 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <section id="cover" class="cover">
-    <p>Wedding Invitation</p>
-    <h1>Pratik & Partner</h1>
-    <p>We are getting married</p>
-
-    <button id="openButton">Open Invitation</button>
-  </section>
-
-  <main id="invitation" class="hidden">
-    <section class="hero">
-      <p>Save the Date</p>
-      <h1>Pratik & Partner</h1>
-      <p>20 December 2026</p>
+  <a class="skip-link" href="#celebration">Skip to wedding details</a>
+  <header class="site-header">
+    <a class="monogram" href="#home" aria-label="Pratik and Sakshi, home">P <span>&</span> S</a>
+    <nav aria-label="Invitation"><a href="#celebration">The days</a><a href="#venue">The place</a><a href="#rsvp">RSVP</a></nav>
+  </header>
+  <main id="invitation">
+    <section id="home" class="hero" aria-labelledby="couple-names">
+      <img class="hero-photo" src="assets/couple.JPG" alt="Pratik and Sakshi together at their engagement" fetchpriority="high" />
+      <div class="hero-content">
+        <p class="eyebrow">Together with our families</p>
+        <h1 id="couple-names">Pratik <span class="ampersand">&</span><br />Sakshi</h1>
+        <p class="hero-message">A lifetime together.<br />A celebration with you.</p>
+        <p class="hero-date">26 & 27 December 2026 <span>Barshi, Maharashtra</span></p>
+        <a class="button light" href="#celebration">You're invited <i data-lucide="arrow-down" aria-hidden="true"></i></a>
+      </div>
+      <span class="hero-caption">Our next chapter starts here.</span>
     </section>
-
-    <section class="message">
-      <h2>With Joy in Our Hearts</h2>
-      <p>
-        We invite you to celebrate our special day with us.
-      </p>
-    </section>
-
-    <section class="events">
-      <h2>Wedding Events</h2>
-
-      <div class="event-card">
-        <h3>Wedding Ceremony</h3>
-        <p>20 December 2026 · 11:00 AM</p>
-        <p>Example Wedding Hall, Mumbai</p>
-        <a href="https://maps.google.com" target="_blank">
-          View Location
-        </a>
+    <section class="intro section-pad" aria-labelledby="intro-title">
+      <div class="section-inner intro-inner reveal">
+        <p class="eyebrow">A little us. A lot of love.</p>
+        <h2 id="intro-title">Two hearts.<br /><em>One beautiful beginning.</em></h2>
+        <p>With joy in our hearts and the blessings of our families, we invite you to be part of our wedding. Come for the celebrations. Stay for the memories.</p>
+        <span class="signature">Pratik & Sakshi</span>
       </div>
     </section>
-
-    <section class="gallery">
-      <h2>Our Memories</h2>
-      <div class="gallery-grid">
-        <img src="assets/couple.jpg" alt="Couple photo" />
-        <img src="assets/background.jpg" alt="Wedding photo" />
+    <section class="memories section-pad" aria-labelledby="memories-title">
+      <div class="section-inner">
+        <div class="section-heading reveal"><p class="eyebrow">The two of us</p><h2 id="memories-title">This is our<br /><em>kind of forever.</em></h2></div>
+        <div class="photo-grid">
+          <figure class="photo-story reveal"><img src="assets/us.jpeg" alt="Pratik and Sakshi sharing a quiet moment" loading="lazy" /><figcaption><span>A moment, just ours.</span><span>01 / Together</span></figcaption></figure>
+          <figure class="photo-story second-photo reveal"><img src="assets/background.JPG" alt="Pratik and Sakshi holding their engagement rings" loading="lazy" /><figcaption><span>The promise of a lifetime.</span><span>02 / Forever</span></figcaption></figure>
+        </div>
       </div>
     </section>
-
-    <section class="rsvp">
-      <h2>RSVP</h2>
-      <p>Please confirm your presence.</p>
-      <a
-        class="button"
-        href="https://forms.google.com"
-        target="_blank"
-      >
-        Confirm Attendance
-      </a>
+    <section id="celebration" class="celebration section-pad" aria-labelledby="celebration-title">
+      <div class="section-inner">
+        <div class="section-heading reveal"><p class="eyebrow">One wedding. Two wonderful days.</p><h2 id="celebration-title">Let the<br /><em>celebrations begin.</em></h2></div>
+        <div class="day-grid">
+          <article class="day reveal" aria-labelledby="day-one">
+            <header class="day-heading"><span class="day-number">26</span><div><p class="eyebrow">December 2026 / Saturday</p><h3 id="day-one">A little colour.<br />A little dancing.</h3></div></header>
+            <div class="event"><div class="event-top"><h4>Haldi</h4><time datetime="2026-12-26T16:00:00+05:30">4:00 PM</time></div><p>A bright beginning, surrounded by the people we love.</p></div>
+            <div class="event"><div class="event-top"><h4>Sangeet</h4><time datetime="2026-12-26T19:00:00+05:30">7:00 PM</time></div><p>An evening of music, laughter, and a dance floor full of family.</p></div>
+          </article>
+          <article class="day wedding-day reveal" aria-labelledby="day-two">
+            <header class="day-heading"><span class="day-number">27</span><div><p class="eyebrow">December 2026 / Sunday</p><h3 id="day-two">The day we say<br />forever.</h3></div></header>
+            <div class="event"><div class="event-top"><h4>Wedding Ceremony</h4><time datetime="2026-12-27T09:00:00+05:30">9:00 AM</time></div><p>Join us as we begin our married life with love and blessings.</p></div>
+            <div class="event"><div class="event-top"><h4>Reception</h4><time datetime="2026-12-27T18:00:00+05:30">6:00 PM</time></div><p>More smiles, warm wishes, and a beautiful evening together.</p></div>
+          </article>
+        </div>
+        <button id="calendarButton" class="text-link" type="button"><i data-lucide="calendar-plus" aria-hidden="true"></i> Save the celebrations</button>
+      </div>
     </section>
-
-    <section class="countdown">
-      <h2>Counting Down to Our Day</h2>
-      <div id="timer"></div>
+    <section id="venue" class="venue section-pad" aria-labelledby="venue-title">
+      <div class="section-inner venue-grid">
+        <div class="venue-copy reveal"><p class="eyebrow">Meet us here</p><h2 id="venue-title">All roads<br /><em>lead to Barshi.</em></h2><h3>Adarsh Lawns</h3><address>Sambhaji Nagar, Barshi<br />Maharashtra 413401</address><a class="button" href="https://www.google.com/maps/search/?api=1&query=Adarsh+Lawns+Barshi" target="_blank" rel="noopener noreferrer">Get directions <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+        <div class="map-frame reveal"><iframe title="Adarsh Lawns wedding venue in Barshi" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.364858992159!2d75.70589457518487!3d18.23908828280069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc45535d3b9f975%3A0x917a0563d2d4f039!2sAdarsh%20Lawns!5e0!3m2!1sen!2sin!4v1792496843593!5m2!1sen!2sin" width="600" height="450" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      </div>
+    </section>
+    <section class="countdown section-pad" aria-labelledby="countdown-title">
+      <div class="section-inner reveal"><p class="eyebrow">Until our forever begins</p><h2 id="countdown-title">We can't wait.</h2><div id="timer" class="timer" role="timer" aria-label="Time until the wedding"><div><span id="days">00</span><small>Days</small></div><div><span id="hours">00</span><small>Hours</small></div><div><span id="minutes">00</span><small>Minutes</small></div><div><span id="seconds">00</span><small>Seconds</small></div></div><p id="countdownMessage">27 December 2026, 9:00 AM IST</p></div>
+    </section>
+    <section id="rsvp" class="rsvp section-pad" aria-labelledby="rsvp-title">
+      <div class="section-inner rsvp-grid">
+        <div class="reveal"><p class="eyebrow">You make it special</p><h2 id="rsvp-title">A celebration<br /><em>is better with you.</em></h2><p>We would love to have you with us.<br />Let us know if you can make it.</p></div>
+        <form id="rsvpForm" class="rsvp-form reveal">
+          <label for="guestName">Your name</label><input id="guestName" name="guestName" autocomplete="name" placeholder="Name & family" maxlength="100" required />
+          <fieldset><legend>Will you be joining us?</legend><div class="attendance-options"><label><input type="radio" name="attendance" value="yes" checked /> With pleasure</label><label><input type="radio" name="attendance" value="no" /> Sadly, can't make it</label></div></fieldset>
+          <button class="button" type="submit">RSVP via WhatsApp <i data-lucide="send" aria-hidden="true"></i></button>
+          <p id="rsvpStatus" class="form-status" role="status"></p>
+        </form>
+      </div>
     </section>
   </main>
-
-  <audio id="music" loop>
-    <source src="assets/music.mp3" type="audio/mpeg" />
-  </audio>
-
-  <script src="script.js"></script>
+  <footer><a class="footer-names" href="#home">Pratik & Sakshi</a><p>26 & 27 December 2026 / Barshi</p><p>With love, and a place for you.</p></footer>
+  <button id="musicButton" class="music-button" type="button" aria-label="Play music" title="Play music" aria-pressed="false"><i data-lucide="volume-x" aria-hidden="true"></i></button>
+  <span id="musicStatus" class="sr-only" role="status"></span>
+  <audio id="music" loop preload="none"><source src="assets/weddingMusic.mp3" type="audio/mpeg" /></audio>
 </body>
 </html>
