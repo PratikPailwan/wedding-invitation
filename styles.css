@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #4a3b35;
+  background: #f8f0e8;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  color: white;
+  background:
+    linear-gradient(rgba(55, 35, 28, 0.45), rgba(55, 35, 28, 0.45)),
+    url("assets/background.jpg") center/cover;
+}
+
+.cover h1 {
+  font-size: clamp(42px, 10vw, 90px);
+  margin: 16px 0;
+}
+
+button,
+.button {
+  display: inline-block;
+  border: 0;
+  border-radius: 30px;
+  padding: 14px 28px;
+  color: white;
+  background: #a66a55;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+section {
+  padding: 80px 24px;
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ead8cb;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 9vw, 82px);
+  margin: 12px 0;
+}
+
+.message {
+  background: #fffaf5;
+}
+
+.events {
+  background: #f1dfd4;
+}
+
+.event-card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(80, 50, 30, 0.12);
+}
+
+.event-card a {
+  color: #a66a55;
+}
+
+.gallery {
+  background: #fffaf5;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 650px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.rsvp {
+  background: #ead8cb;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 60px 18px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 250px;
+  }
+}
